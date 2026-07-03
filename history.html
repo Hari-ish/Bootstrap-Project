@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History Books Collection</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body { 
+    background-color: #ece3d0; 
+    font-family: 'Nunito Sans', sans-serif; 
+    color: #3a2f22; }
+  .display-font { 
+    font-family: 'Playfair Display', serif;
+ }
+  .page-header {
+     background: linear-gradient(135deg, #3a2f22 0%, #241b12 100%);
+     color: #ece3d0; 
+     border-bottom: 4px solid #a9822f; 
+    }
+  .page-header i { 
+    color: #c9a24b; 
+}
+  .page-header p { 
+    color: #cabfa8; 
+}
+
+  .book-cover { 
+    height: 220px;
+     position: relative;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      overflow: hidden;
+     }
+  .book-cover::before { 
+    content:""; 
+    position:absolute; 
+    inset:0; 
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12), transparent 60%); 
+}
+  .book-cover::after { 
+    content:""; 
+    position:absolute;
+     inset:0; 
+     border: 6px solid rgba(255,255,255,0.06); 
+    }
+  .book-cover i { 
+    font-size: 3.4rem; 
+    color: #ece3d0; 
+    z-index: 1; 
+}
+  .cover-1 { 
+    background: linear-gradient(160deg, #6b4a25, #382410);
+ }
+  .cover-2 {
+     background: linear-gradient(160deg, #4a3323, #221509); 
+    }
+  .cover-3 { 
+    background: linear-gradient(160deg, #5c2a2a, #2c1212);
+ }
+  .cover-4 { 
+    background: linear-gradient(160deg, #33463a, #16211b); 
+}
+  .cover-5 { 
+    background: linear-gradient(160deg, #3d3a5c, #1c1a30); 
+}
+  .cover-6 { 
+    background: linear-gradient(160deg, #7a5c1e, #3f2f0f);
+}
+
+  .book-card { 
+    border: 1px solid #cdbfa0; 
+    border-radius: 0.3rem; 
+    overflow: hidden; 
+    background: #f7f1e3; 
+    transition: transform 0.25s ease, box-shadow 0.25s ease; 
+    height: 100%;
+}
+  .book-card:hover{ 
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(58,47,34,0.25);
+}
+  .genre-badge { 
+    background-color: #e3d6b8;
+    color: #5c4626;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    border-radius: 0.2rem;
+}
+  .book-title { 
+    color: #2b2116;
+}
+  .book-author { 
+    color: #8a7659; 
+}
+  .book-desc { 
+    color: #5c4f3c; 
+}
+  .btn-antique { 
+    background-color: #6b4a25; 
+    color: #f7f1e3; 
+    border: none; 
+    border-radius: 0.2rem;
+}
+  .btn-antique:hover { 
+    background-color: #4a3319; 
+    color: #f7f1e3; 
+}
+  .rating-star { 
+    color: #a9822f; 
+}
+  .era-tag { 
+    color: #8a7659; 
+    font-style: italic;
+     }
+</style>
+</head>
+<body>
+
+<div class="page-header py-5 mb-5 text-center">
+  <div class="container">
+    <i class="bi bi-hourglass-split display-4 mb-3"></i>
+    <h1 class="display-font fw-bold mb-2">History Books Collection</h1>
+    <p class="mb-0">Chronicles of empires, wars, and the people who shaped them</p>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <div class="row g-4">
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-1">
+                <img src="./history1.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-columns-gap"></i></div>
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge genre-badge">Ancient History</span>
+            <span class="small era-tag">753 BC – 476 AD</span>
+          </div>
+          <h5 class="display-font fw-bold mb-1 book-title">SPQR: A History of Ancient Rome</h5>
+          <p class="book-author small mb-2">Mary Beard</p>
+          <p class="card-text small book-desc mb-3">A sweeping account of Rome's rise from a small settlement to a sprawling empire.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <button class="btn btn-antique btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-2">
+                            <img src="./history2.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-flag"></i></div>
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge genre-badge">World War</span>
+            <span class="small era-tag">1939 – 1945</span>
+          </div>
+          <h5 class="display-font fw-bold mb-1 book-title">The Rise and Fall of the Third Reich</h5>
+          <p class="book-author small mb-2">William L. Shirer</p>
+          <p class="card-text small book-desc mb-3">A landmark account of Nazi Germany's ascent to power and its catastrophic collapse.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <button class="btn btn-antique btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-3">
+            <img src="./history3.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-bank"></i></div>
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge genre-badge">Revolution</span>
+            <span class="small era-tag">1789 – 1799</span>
+          </div>
+          <h5 class="display-font fw-bold mb-1 book-title">A Tale of the French Revolution</h5>
+          <p class="book-author small mb-2">Various Historians</p>
+          <p class="card-text small book-desc mb-3">The turbulent decade that toppled a monarchy and redrew the map of political ideas.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></div>
+            <button class="btn btn-antique btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-4">
+                            <img src="./history4.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-compass"></i></div>
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge genre-badge">World History</span>
+            <span class="small era-tag">70,000 BC – Present</span>
+          </div>
+          <h5 class="display-font fw-bold mb-1 book-title">Sapiens: A Brief History of Humankind</h5>
+          <p class="book-author small mb-2">Yuval Noah Harari</p>
+          <p class="card-text small book-desc mb-3">A survey of how a single species of ape came to reshape the entire planet.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <button class="btn btn-antique btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-5">
+                            <img src="./history5.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-shield-shaded"></i></div>
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge genre-badge">Cold War</span>
+            <span class="small era-tag">1947 – 1991</span>
+          </div>
+          <h5 class="display-font fw-bold mb-1 book-title">The Cold War: A New History</h5>
+          <p class="book-author small mb-2">John Lewis Gaddis</p>
+          <p class="card-text small book-desc mb-3">A concise history of the decades-long standoff between two rival superpowers.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+            <button class="btn btn-antique btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-6">
+                            <img src="./history6.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-pyramid"></i></div>
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge genre-badge">Ancient Egypt</span>
+            <span class="small era-tag">3100 BC – 30 BC</span>
+          </div>
+          <h5 class="display-font fw-bold mb-1 book-title">The Complete Pyramids</h5>
+          <p class="book-author small mb-2">Mark Lehner</p>
+          <p class="card-text small book-desc mb-3">An illustrated exploration of Egypt's monumental tombs and the civilization that built them.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <button class="btn btn-antique btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

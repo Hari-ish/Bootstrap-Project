@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantasy Books Collection</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+  body { 
+    background-color: #17122b; 
+    font-family: 'Nunito Sans', sans-serif; 
+    color: #e9e4f5;
+}
+  .display-font {
+    font-family: 'Cormorant Garamond', serif; 
+    letter-spacing: 0.02em;
+}
+  .page-header { 
+    background: radial-gradient(ellipse at top, #3a2a6b 0%, #17122b 70%); 
+    border-bottom: 1px solid #3f3468;
+}
+  .page-header i { 
+    color: #c9a24b;
+}
+  .page-header p { 
+    color: #b6acd6
+}
+  .book-cover { 
+    height: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+  .book-cover::before { 
+    content:""; 
+    position:absolute; 
+    inset:0; 
+    background: radial-gradient(circle at 30% 15%, rgba(255,255,255,0.12), transparent 55%);
+}
+  .book-cover i { 
+    font-size: 3.5rem; 
+    color: rgba(233, 228, 245, 0.95); 
+    z-index: 1;
+    filter: drop-shadow(0 0 12px rgba(201,162,75,0.5));
+}
+  .cover-1 {
+    background: linear-gradient(160deg, #4a2f7d, #1c1238);
+}
+  .cover-2 {
+    background: linear-gradient(160deg, #2d4a3d, #10201a);
+}
+  .cover-3 { 
+    background: linear-gradient(160deg, #5c2333, #240d15);
+}
+  .cover-4 { 
+    background: linear-gradient(160deg, #1f3a5c, #0c1826);
+}
+  .cover-5 {
+    background: linear-gradient(160deg, #6b3f1f, #2c1a0d);
+}
+  .cover-6 {
+    background: linear-gradient(160deg, #3d1f5c, #170d26)
+}
+
+  .book-card { 
+    border: 1px solid #332a56; 
+    border-radius: 0.6rem;
+    overflow: hidden;
+    background: #1e1938;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    height: 100%;
+}
+  .book-card:hover { 
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2.2rem rgba(201,162,75,0.25);
+    border-color: #c9a24b;
+}
+  .genre-badge { 
+    background-color: #2c2350;
+    color: #c9a24b; 
+    font-weight: 600;
+     font-size: 0.72rem; 
+     letter-spacing: 0.05em;
+      border: 1px solid #453a72; 
+    }
+  .book-title { 
+    color: #f3f0fb; 
+}
+  .book-author { 
+    color: #a89bc9;
+}
+  .book-desc {
+    color: #c3bce0; 
+}
+  .btn-arcane { 
+    background-color: #4a2f7d; 
+    color: #f3f0fb; 
+    border: none;
+}
+  .btn-arcane:hover { 
+    background-color: #5c3d99; 
+    color: #f3f0fb;
+ }
+  .rating-star { 
+    color: #c9a24b;
+    }
+</style>
+</head>
+<body>
+
+<div class="page-header py-5 mb-5 text-center">
+  <div class="container">
+    <i class="bi bi-stars display-4 mb-3"></i>
+    <h1 class="display-font fw-bold mb-2" style="font-size:2.6rem;">Fantasy Books Collection</h1>
+    <p class="mb-0">Realms of magic, myth, and legendary quests</p>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <div class="row g-4">
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-1">
+            <img src="./fantasy1.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-gem"></i></div>
+        <div class="card-body p-4">
+          <span class="badge genre-badge mb-2">Epic Fantasy</span>
+          <h5 class="display-font fw-bold mb-1 book-title fs-3">The Hobbit</h5>
+          <p class="book-author small mb-2">J.R.R. Tolkien</p>
+          <p class="card-text small book-desc mb-3">A reluctant homebody joins a band of dwarves on a quest to reclaim treasure from a dragon.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <button class="btn btn-arcane btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-2">
+            <img src="./fantasy2.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-tree"></i></div>
+        <div class="card-body p-4">
+          <span class="badge genre-badge mb-2">High Fantasy</span>
+          <h5 class="display-font fw-bold mb-1 book-title fs-3">The Fellowship of the Ring</h5>
+          <p class="book-author small mb-2">J.R.R. Tolkien</p>
+          <p class="card-text small book-desc mb-3">A hobbit and his companions set out to destroy a ring of immense and terrible power.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <button class="btn btn-arcane btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-3">
+                                <img src="./fantasy3.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-magic"></i></div>
+        <div class="card-body p-4">
+          <span class="badge genre-badge mb-2">Wizarding</span>
+          <h5 class="display-font fw-bold mb-1 book-title fs-3">Harry Potter and the Sorcerer's Stone</h5>
+          <p class="book-author small mb-2">J.K. Rowling</p>
+          <p class="card-text small book-desc mb-3">An orphaned boy discovers he is a wizard and enters a hidden school of magic.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <button class="btn btn-arcane btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-4">
+            <img src="./fantasy4.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-shield"></i></div>
+        <div class="card-body p-4">
+          <span class="badge genre-badge mb-2">Portal Fantasy</span>
+          <h5 class="display-font fw-bold mb-1 book-title fs-3">The Lion, the Witch and the Wardrobe</h5>
+          <p class="book-author small mb-2">C.S. Lewis</p>
+          <p class="card-text small book-desc mb-3">Four siblings step through a wardrobe into a snowbound land ruled by an icy witch.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+            <button class="btn btn-arcane btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-5">
+                 <img src="./fantasy5.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-fire"></i></div>
+        <div class="card-body p-4">
+          <span class="badge genre-badge mb-2">Sword & Sorcery</span>
+          <h5 class="display-font fw-bold mb-1 book-title fs-3">A Wizard of Earthsea</h5>
+          <p class="book-author small mb-2">Ursula K. Le Guin</p>
+          <p class="card-text small book-desc mb-3">A gifted young mage unleashes a shadow creature and must hunt it across the world.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <button class="btn btn-arcane btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card book-card">
+        <div class="book-cover cover-6">
+                <img src="./fantasy6.jpg" alt="SPQR Book Cover" class="w-100 h-100 object-fit-cover">
+            <i class="bi bi-cloud-moon"></i></div>
+        <div class="card-body p-4">
+          <span class="badge genre-badge mb-2">Mythic Fantasy</span>
+          <h5 class="display-font fw-bold mb-1 book-title fs-3">American Gods</h5>
+          <p class="book-author small mb-2">Neil Gaiman</p>
+          <p class="card-text small book-desc mb-3">An ex-convict is drawn into a brewing war between old gods and new in modern America.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="rating-star small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></div>
+            <button class="btn btn-arcane btn-sm fw-bold px-3">Read Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
